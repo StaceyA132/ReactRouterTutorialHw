@@ -8,6 +8,17 @@ export async function action({ request, params }) {
     return redirect(`/contacts/${params.contactId}`);
   }
 
+  export async function action({ request, params }) {
+    const formData = await request.formData();
+    const firstName = formData.get("first");
+    const lastName = formData.get("last");
+    // ...
+  }
+
+
+
+
+
 
 export default function EditContact() {
   const { contact } = useLoaderData();
