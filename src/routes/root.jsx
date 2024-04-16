@@ -1,6 +1,6 @@
-import { Outlet, Link, useLoaderData } from "react-router-dom";
+import { Outlet, Link, useLoaderData, Form } from "react-router-dom";
 
-import { getContacts } from "../contacts";
+import { getContacts, createContact } from "../contacts";
 
 export async function loader() {
   const contacts = await getContacts();
@@ -32,8 +32,8 @@ export default function Root() {
                 aria-live="polite"
               ></div>
             </form>
-            <form method="post">
-              <button type="submit">New</button>
+            <form method = "post">
+              <button type = "submit">New</button>
             </form>
           </div>
           <nav>
